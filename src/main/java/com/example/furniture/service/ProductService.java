@@ -24,9 +24,9 @@ public interface ProductService {
     List<ProductEntity> getProductByName(String productName);
     //상품가격
     //기준가 이상
-    List<ProductEntity> getProductByPriceMoreThan(int productPrice);
+    List<ProductEntity> getProductByPriceGreaterThan(int productPriceMore);
     //기준가 이하
-    List<ProductEntity> getProductByPriceLessThan(int productPrice);
+    List<ProductEntity> getProductByPriceLessThan(int productPriceLess);
     //기준가1~기준가2
     List<ProductEntity> getProductByPriceBetween(int productPrice1, int productPrice2);
 }

@@ -13,6 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(name="product")
 public class ProductEntity {
 
     @Id
@@ -22,7 +23,7 @@ public class ProductEntity {
     private String productName;
     @Column
     private int productPrice;
-    @Column
+    @Column(name = "category")
     @Enumerated(EnumType.STRING)
     private Category category;
 }
