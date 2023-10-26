@@ -9,9 +9,9 @@ import java.util.List;
 
 public interface ProductRepository extends JpaRepository <ProductEntity, Integer> {
 
-    List<ProductEntity> findByProductPriceGreaterThan(int productPrice);
+    List<ProductEntity> findByProductPriceGreaterThan(int productPriceMore);
 
-    List<ProductEntity> findByProductPriceLessThan(int productPrice);
+    List<ProductEntity> findByProductPriceLessThan(int productPriceLess);
 
     List<ProductEntity> findByProductPriceBetween(int productPrice1, int productPrice2);
 

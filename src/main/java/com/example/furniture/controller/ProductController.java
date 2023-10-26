@@ -48,28 +48,29 @@ public class ProductController {
     }
 
     //id
-    @GetMapping("/{productId}")
+    @GetMapping("/id/{productId}")
     @Operation(summary = "data id 조회", description = "data id 조회")
     public ProductEntity getProductById(@PathVariable int productId) {
+
         return ps.getProductById(productId);
     }
 
     //name
-    @GetMapping("/{productName}")
+    @GetMapping("/productName/{productName}")
     @Operation(summary = "product name 조회", description = "product name 조회")
     public  List<ProductEntity> getProductByPriceMore(@PathVariable String productName) {
         return ps.getProductByName(productName);
     }
 
     //기준가 이상
-    @GetMapping("/{productPriceMore}")
+    @GetMapping("/More/{productPriceMore}")
     @Operation(summary = "data price(more than) 조회", description = "data price(more than) 조회")
     public  List<ProductEntity> getProductByPriceMore(@PathVariable int productPriceMore) {
         return ps.getProductByPriceGreaterThan(productPriceMore);
     }
 
     //기준가 이하
-    @GetMapping("/{productPriceLess}")
+    @GetMapping("/Less/{productPriceLess}")
     @Operation(summary = "data price(less than) 조회", description = "data price(less than) 조회")
     public  List<ProductEntity> getProductByPriceLess(@PathVariable int productPriceLess) {
         return ps.getProductByPriceLessThan(productPriceLess);
@@ -83,7 +84,7 @@ public class ProductController {
     }
 
     //카테고리
-    @GetMapping("/{category}")
+    @GetMapping("/category/{category}")
     @Operation(summary = "data price(category) 조회", description = "data price(category) 조회")
     public  List<ProductEntity> getProductByPriceBetween(@PathVariable String category) {
         return ps.getProductByCategory(category);
