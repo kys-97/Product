@@ -48,7 +48,7 @@ public class ProductController {
     }
 
     //id
-    @GetMapping
+    @GetMapping("/{productId}")
     @Operation(summary = "data id 조회", description = "data id 조회")
     public ProductEntity getProductById(@PathVariable int productId) {
         return ps.getProductById(productId);

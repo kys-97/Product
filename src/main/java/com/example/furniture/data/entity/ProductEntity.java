@@ -1,5 +1,6 @@
 package com.example.furniture.data.entity;
 
+import com.example.furniture.data.Category;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,5 +24,5 @@ public class ProductEntity {
     private int productPrice;
     @Column
     @Enumerated(EnumType.STRING)
-    private String Category;
+    private Category category;
 }

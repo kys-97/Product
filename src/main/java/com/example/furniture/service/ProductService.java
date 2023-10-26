@@ -16,17 +16,17 @@ public interface ProductService {
     //상품리스트 조회
     List<ProductEntity> getAllProduct();
     //카테고리별 상품 검색
-    ProductEntity getProductByCategory(String category);
+    List<ProductEntity> getProductByCategory(String category);
     //특정 상품 검색
     //id
     ProductEntity getProductById(int productId);
     //상품명
-    ProductEntity getProductByName(String productName);
+    List<ProductEntity> getProductByName(String productName);
     //상품가격
     //기준가 이상
-    ProductEntity getProductByPriceHigh(int productPrice);
+    List<ProductEntity> getProductByPriceMoreThan(int productPrice);
     //기준가 이하
-    ProductEntity getProductByPriceLow(int productPrice);
+    List<ProductEntity> getProductByPriceLessThan(int productPrice);
     //기준가1~기준가2
-    ProductEntity getProductByPriceBetween(int productPrice1, int productPrice2);
+    List<ProductEntity> getProductByPriceBetween(int productPrice1, int productPrice2);
 }
