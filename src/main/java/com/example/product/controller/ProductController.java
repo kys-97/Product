@@ -57,8 +57,8 @@ public class ProductController {
 
     //name
     @GetMapping("/productName/{productName}")
-    @Operation(summary = "product name 조회", description = "product name 조회")
-    public  List<ProductEntity> getProductByPriceMore(@PathVariable String productName) {
+    @Operation(summary = "product name 검색어 포함 조회", description = "product name 검색어 포함 조회")
+    public  List<ProductEntity> getProductByProductName (@PathVariable String productName) {
         return ps.findByProductNameContaining(productName);
     }
 
