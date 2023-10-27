@@ -15,7 +15,7 @@ public class SwagConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.myUser.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.product.controller"))
                 .paths(PathSelectors.any())
                 .build().apiInfo(apiInfoMetaData());
     }
