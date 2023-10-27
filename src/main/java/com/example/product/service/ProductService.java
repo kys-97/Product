@@ -1,7 +1,7 @@
-package com.example.furniture.service;
+package com.example.product.service;
 
-import com.example.furniture.data.dto.ProductDto;
-import com.example.furniture.data.entity.ProductEntity;
+import com.example.product.data.dto.ProductDto;
+import com.example.product.data.entity.ProductEntity;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ public interface ProductService {
     //id
     ProductEntity getProductById(int productId);
     //상품명
-    List<ProductEntity> getProductByName(String productName);
+    List<ProductEntity> findByProductNameContaining(String productName);
     //상품가격
     //기준가 이상
     List<ProductEntity> getProductByPriceGreaterThan(int productPriceMore);

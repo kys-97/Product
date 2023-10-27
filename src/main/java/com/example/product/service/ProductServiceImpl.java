@@ -1,9 +1,9 @@
-package com.example.furniture.service;
+package com.example.product.service;
 
-import com.example.furniture.data.dto.ProductDto;
-import com.example.furniture.data.entity.ProductEntity;
-import com.example.furniture.data.mapper.ProductMapper;
-import com.example.furniture.repository.ProductRepository;
+import com.example.product.data.dto.ProductDto;
+import com.example.product.data.entity.ProductEntity;
+import com.example.product.data.mapper.ProductMapper;
+import com.example.product.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -58,8 +58,8 @@ pr.deleteById(productId);
 
     //상품명으로 제품 검색
     @Override
-    public List<ProductEntity> getProductByName(String productName) {
-        return pr.findByProductName(productName);
+    public List<ProductEntity> findByProductNameContaining(String productName) {
+        return pr.findByProductNameContaining(productName);
     }
 
 

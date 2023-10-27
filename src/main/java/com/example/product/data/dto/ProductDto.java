@@ -1,10 +1,7 @@
-package com.example.furniture.data.dto;
+package com.example.product.data.dto;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.validation.constraints.NotNull;
 
 @Data

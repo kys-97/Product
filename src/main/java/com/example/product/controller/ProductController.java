@@ -1,8 +1,8 @@
-package com.example.furniture.controller;
+package com.example.product.controller;
 
-import com.example.furniture.data.dto.ProductDto;
-import com.example.furniture.data.entity.ProductEntity;
-import com.example.furniture.service.ProductService;
+import com.example.product.data.dto.ProductDto;
+import com.example.product.data.entity.ProductEntity;
+import com.example.product.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +59,7 @@ public class ProductController {
     @GetMapping("/productName/{productName}")
     @Operation(summary = "product name 조회", description = "product name 조회")
     public  List<ProductEntity> getProductByPriceMore(@PathVariable String productName) {
-        return ps.getProductByName(productName);
+        return ps.findByProductNameContaining(productName);
     }
 
     //기준가 이상

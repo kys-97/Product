@@ -1,6 +1,6 @@
-package com.example.furniture.data.entity;
+package com.example.product.data.entity;
 
-import com.example.furniture.data.Category;
+import com.example.product.data.Category;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

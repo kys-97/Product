@@ -1,8 +1,8 @@
-package com.example.furniture.data.mapper;
+package com.example.product.data.mapper;
 
-import com.example.furniture.data.Category;
-import com.example.furniture.data.dto.ProductDto;
-import com.example.furniture.data.entity.ProductEntity;
+import com.example.product.data.Category;
+import com.example.product.data.dto.ProductDto;
+import com.example.product.data.entity.ProductEntity;
 import org.springframework.stereotype.Component;
 
 @Component
